@@ -1,1 +1,157 @@
-Hello World{
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Retro MacOS Portfolio</title>
+		<link rel="stylesheet" href="retro-macos.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Pixelify+Sans:wght@400..700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<!-- Menu bar at the top -->
+		<div id="menu-bar">
+			<ul>
+				<li><img src="resources/SVG/Asset 3.svg" alt="Computer icon" /></li>
+				<li class="menu-item">
+					Socials
+					<ul class="dropdown-content">
+						<li>
+							<a href="https://www.linkedin.com/in/software-tatereynolds/"
+								>LinkedIn</a
+							>
+						</li>
+						<li><a href="https://github.com/TateRCXVII">GitHub</a></li>
+						<li>
+							<a href="https://u0578264.myportfolio.com">Creative Portfolio</a>
+						</li>
+					</ul>
+				</li>
+				<li class="menu-item">
+					File
+					<ul class="dropdown-content">
+						<li><a href="#new">New</a></li>
+						<li><a href="#open">Open</a></li>
+						<li><a href="#save">Save</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+
+		<!-- Desktop area -->
+		<div id="desktop">
+			<!-- Profile icon -->
+			<div id="profileIcon" class="desktop-icon" onclick="openProfile()">
+				<img src="resources/profile.jpg" alt="Profile Icon" />
+				<p>My Profile</p>
+			</div>
+
+			<!-- Project icons -->
+			<a
+				href="https://github.com/TateRCXVII/tateandzay-wedding"
+				target="_blank"
+				class="desktop-icon"
+			>
+				<img src="resources/SVG/Asset 1.svg" alt="Project 1" />
+				<p>Wedding Next.js App</p>
+			</a>
+			<a
+				href="https://github.com/TateRCXVII/ChessTeachingApp"
+				target="_blank"
+				class="desktop-icon"
+			>
+				<img src="resources/SVG/Asset 1.svg" alt="Project 1" />
+				<p>Chess Teaching C++ App</p>
+			</a>
+			<a
+				href="https://github.com/TateRCXVII/my-spreadsheet"
+				target="_blank"
+				class="desktop-icon"
+			>
+				<img src="resources/SVG/Asset 1.svg" alt="Project 1" />
+				<p>Custom C# Spreadsheet</p>
+			</a>
+			<a
+				href="https://github.com/TateRCXVII/agario-game"
+				target="_blank"
+				class="desktop-icon"
+			>
+				<img src="resources/SVG/Asset 1.svg" alt="Project 1" />
+				<p>Custom C# Agario Game</p>
+			</a>
+			<a
+				href="https://github.com/TateRCXVII/6960_HW2"
+				target="_blank"
+				class="desktop-icon"
+			>
+				<img src="resources/SVG/Asset 1.svg" alt="Project 1" />
+				<p>BIRL Practice</p>
+			</a>
+			<a
+				href="https://github.com/TateRCXVII/Data-Wrangling"
+				target="_blank"
+				class="desktop-icon"
+			>
+				<img src="resources/SVG/Asset 1.svg" alt="Project 1" />
+				<p>Data Wrangling Projects</p>
+			</a>
+			<a
+				href="https://github.com/TateRCXVII/3130-Honey-Bees"
+				target="_blank"
+				class="desktop-icon"
+			>
+				<img src="resources/SVG/Asset 1.svg" alt="Project 1" />
+				<p>Honey Bee Statistics/Data Viz Project</p>
+			</a>
+		</div>
+
+		<div id="profileModal" class="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="modal-title">My Profile</span>
+					<span class="close-button">×</span>
+				</div>
+				<div class="modal-body">
+					<img
+						src="resources/profile.jpg"
+						alt="A larger image of me"
+						style="width: 100%; max-width: 300px"
+					/>
+					<p>
+						As a vibrant enthusiast of the outdoors and a dedicated student of
+						technology, I am at the cusp of transforming my passion into a
+						profession. My affinity for climbing, hiking, and skiing mirrors the
+						heights I strive to achieve in my personal and professional life.
+						These pursuits have honed my leadership skills and fostered a growth
+						mindset that thrives on problem-solving and collaborative
+						innovation.
+					</p>
+					<p>
+						Equipped with a Software Engineering degree from the University of
+						Utah, I am poised to graduate in May 2024, bringing with me a wealth
+						of development experience garnered through various internships and
+						projects. My agility in learning and visualizing solutions has been
+						a cornerstone of my academic and work endeavors, allowing me to
+						quickly adapt and excel in dynamic environments. As I stand at the
+						threshold of a new chapter, I am eager to channel my tenacity and
+						expertise into new challenges that await in the tech landscape.
+					</p>
+					<a href="resources/SoftwareEngineerResume.pdf" target="_blank"
+						>View My Resume</a
+					>
+				</div>
+				<div class="modal-footer">
+					<span>System Folder</span>
+					<span>173K available</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- Additional scripts -->
+		<script src="scripts.js"></script>
+	</body>
+</html>

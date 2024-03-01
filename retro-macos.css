@@ -1,0 +1,208 @@
+/* Basic reset */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Pixelify Sans', sans-serif;
+}
+
+/* Style the menu bar to look like old MacOS */
+#menu-bar {
+	background-color: #c0c0c0;
+	padding: 4px 2px;
+	font-family: 'Geneva', 'San Francisco', sans-serif;
+	font-size: 14px;
+	color: black;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	border-top: 2px solid #ffffff; /* Light source from the top */
+	border-left: 2px solid #ffffff; /* Light source from the left */
+	box-shadow: inset 1px 1px 0px #000,
+		/* Inner shadow top and left */ inset -1px -1px 0px #808080; /* Inner shadow bottom and right */
+}
+
+#menu-bar li {
+	padding: 0 8px;
+	text-align: center;
+	cursor: default;
+	border-right: 1px solid #808080; /* Separator with shadow */
+	border-left: 1px solid #fff; /* Light effect for separator */
+	position: relative;
+}
+
+#menu-bar li:first-child {
+	border-left: none; /* No border for the first item */
+}
+
+#menu-bar li:last-child {
+	border-right: none; /* No border for the last item */
+}
+#menu-bar ul {
+	list-style-type: none; /* This removes the bullet points */
+	display: flex;
+	align-items: center;
+	padding-left: 22px; /* To simulate the Apple logo space */
+}
+
+#menu-bar img {
+	width: 18px;
+	height: auto;
+	margin-right: 10px;
+}
+
+/* Style the desktop */
+#desktop {
+	position: relative;
+	min-height: 90vh; /* Or as per your design */
+	background-color: #f0f0f0;
+	padding-top: 32px; /* To prevent overlap with menu bar */
+}
+
+.desktop-icon {
+	position: absolute;
+	display: inline-block;
+	margin: 10px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.desktop-icon img {
+	width: 64px;
+	height: 64px;
+	display: block;
+	margin: 0 auto;
+	background-color: #ffffff;
+}
+
+.desktop-icon p {
+	margin-top: 8px;
+	font-size: 12px;
+	color: black;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: auto;
+	height: auto;
+	background: white;
+	border: 2px solid black;
+	border-radius: 8px;
+}
+
+.modal-content {
+	font-family: 'Geneva', 'Verdana', sans-serif;
+	color: black;
+	padding: 20px;
+	background: #d3d3d3; /* Light grey background */
+}
+
+.modal-header,
+.modal-footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5px 10px;
+	background: #aaa; /* Darker grey header and footer */
+	border-bottom: 1px solid black; /* only for header */
+}
+
+.modal-header {
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+.modal-footer {
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+}
+
+.close-button {
+	background: #d3d3d3;
+	border: 1px solid black;
+	border-radius: 50%;
+	font-family: 'Geneva', 'Verdana', sans-serif;
+	font-size: 24px;
+	line-height: 0;
+	cursor: pointer;
+	width: 24px;
+	height: 24px;
+	text-align: center;
+	padding-top: 0.34em;
+}
+
+.modal-title {
+	font-weight: bold;
+}
+
+.modal-body {
+	background: white;
+	padding: 10px;
+	border: 1px solid black;
+}
+
+/* Pixelate images */
+img {
+	image-rendering: pixelated; /* for modern browsers */
+	image-rendering: -moz-crisp-edges; /* for Firefox */
+	image-rendering: crisp-edges;
+}
+
+/* Style the window to look retro */
+.window {
+	border: 2px solid #000;
+	background-color: #bbb;
+	padding: 2px;
+}
+
+.window-titlebar {
+	background-color: #888;
+	padding: 5px;
+	color: #fff;
+}
+
+/* Style the scrollbar */
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background: #ddd;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #666;
+	border: 2px solid #eee;
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	background-color: #c0c0c0;
+	box-shadow: inset 1px 1px 0px #fff,
+		/* Inner top-left shadow */ 1px 1px 0px #000; /* Outer bottom-right shadow */
+	border: 1px solid #808080; /* Border for the dropdown */
+	z-index: 1; /* Ensure it's above other elements */
+}
+
+.dropdown-content li {
+	padding: 2px 10px;
+	border-top: 1px solid #fff; /* Top border for each item */
+	border-bottom: 1px solid #000; /* Bottom border for each item */
+	white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Hover state for dropdown items */
+.dropdown-content li:hover {
+	background-color: #d3d3d3; /* Light grey for hover */
+}
+
+/* Showing the dropdown menu on parent hover */
+.menu-item:hover .dropdown-content {
+	display: block;
+}
