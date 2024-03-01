@@ -68,11 +68,10 @@
 }
 
 .desktop-icon img {
-	width: 64px;
-	height: 64px;
+	width: 80px;
+	height: 80px;
 	display: block;
 	margin: 0 auto;
-	background-color: #ffffff;
 }
 
 .desktop-icon p {
